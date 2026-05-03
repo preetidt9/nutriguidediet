@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Full Care Spectrum | NutriGuide</title>
+    <style>
+ /* --- Premium Specialized Care Styling --- */
+:root {
+    --primary-green: #2d6a4f;
+    --mustard: #d4a373; /* The refined "Orangish" accent */
+    --soft-yellow: #fdfdf5; /* The soft yellowish background */
+    --text-gray: #555;
+}
+
+body {
+    background-color: var(--soft-yellow); /* Makes the whole background yellowish */
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    padding: 90px 10% 60px;
+}
+
+.header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: var(--primary-green);
+    margin-bottom: 15px;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 50px;
+    padding: 0 8% 80px;
+}
+
+/* The Service Cards (The Boxes) */
+.service-card {
+    background: #ffffff;
+    border-radius: 25px;
+    border: 1px solid #e9e9e0;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden; /* Keeps the top accent inside the curves */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+/* The "Better" Top Part: A Mustard Accent Bar */
+.service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px; /* Refined top border */
+    background-color: var(--mustard); /* Replaces the old orange with gold-mustard */
+}
+
+.service-card {
+    padding: 50px 35px 40px;
+}
+
+/* Card Heading */
+.service-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--primary-green);
+    margin-bottom: 25px;
+}
+
+/* Info Block Styling */
+.info-block {
+    margin-bottom: 20px;
+}
+
+.info-label {
+    display: block;
+    font-weight: 700;
+    color: var(--mustard);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.info-block div { /* Targets the text inside info-block */
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    font-weight: 300;
+}
+
+/* --- THE PREMIUM HOVER --- */
+.service-card:hover {
+    transform: translateY(-15px);
+    border-color: var(--mustard);
+    box-shadow: 0 30px 60px rgba(45, 106, 79, 0.08);
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-bottom: 100px;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--primary-green);
+    border-bottom: 1px solid var(--mustard);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5px;
+}
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Detailed Specialized Care</h1>
+        <p>We understand that health challenges can be overwhelming. We are here to guide you with clinical expertise and a kind heart.</p>
+    </div>
+
+    <div class="grid">
+        <div class="service-card">
+            <h3>PCOS / PCOD</h3>
+            <div class="info-block">
+                <span class="info-label">What it is:</span>
+                A hormonal imbalance where the body struggles to process sugar, leading to energy shifts.
+            </div>
+            <div class="info-block">
+                <span class="info-label">Common Symptoms:</span>
+                Irregular cycles, sudden acne, and stubborn weight changes that feel out of your control.
+            </div>
+        </div>
+
+        <div class="service-card">
+            <h3>Diabetes Control</h3>
+            <div class="info-block">
+                <span class="info-label">What it is:</span>
+                When your blood sugar stays high because your body's natural "energy keys" aren't working properly.
+            </div>
+            <div class="info-block">
+                <span class="info-label">Common Symptoms:</span>
+                Constant thirst, feeling tired after meals, and a frequent need to visit the bathroom.
+            </div>
+        </div>
+		
+		<div class="service-card">
+            <h3>Weight Loss & Gain</h3>
+            <div class="info-block">
+                <span class="info-label">What it is:</span>
+                Achieving your goal weight through a healthy fat-to-muscle ratio rather than restrictive crash dieting.
+            </div>
+            <div class="info-block">
+                <span class="info-label">Common Symptoms:</span>
+                Struggling with a slow metabolism, feeling weak while dieting, or inability to gain healthy mass.
+            </div>
+        </div>
+
+        <div class="service-card">
+            <h3>Heart Wellness</h3>
+            <div class="info-block">
+                <span class="info-label">What it is:</span>
+                Focusing on the "pump" of your life by clearing the paths for smooth blood flow.
+            </div>
+            <div class="info-block">
+                <span class="info-label">Common Symptoms:</span>
+                Breathlessness on short walks, chest tightness, or feeling unusually fatigued during the day.
+            </div>
+        </div>
+
+        <div class="service-card">
+            <h3>Renal (Kidney) Care</h3>
+            <div class="info-block">
+                <span class="info-label">What it is:</span>
+                Helping your body’s natural filters rest by choosing foods that are easy for kidneys to process.
+            </div>
+            <div class="info-block">
+                <span class="info-label">Common Symptoms:</span>
+                Swelling in feet or ankles, changes in urination, and a persistent metallic taste in the mouth.
+            </div>
+        </div>
+
+        <div class="service-card">
+            <h3>Thyroid Support</h3>
+            <div class="info-block">
+                <span class="info-label">What it is:</span>
+                Balancing the master gland that controls your metabolism and overall body temperature.
+            </div>
+            <div class="info-block">
+                <span class="info-label">Common Symptoms:</span>
+                Feeling cold all the time, thinning hair, or sudden unexplained changes in your mood and energy.
+            </div>
+        </div>
+
+        <div class="service-card">
+            <h3>Digestive issues</h3>
+            <div class="info-block">
+                <span class="info-label">What it is:</span>
+                Healing the "second brain" of your body to ensure nutrients are absorbed peacefully.
+            </div>
+            <div class="info-block">
+                <span class="info-label">Common Symptoms:</span>
+                Persistent bloating after meals, painful gas, and irregular bowel movements that disrupt your day.
+            </div>
+        </div>
+		
+		<div class="service-card">
+            <h3>Liver Health Support</h3>
+            <div class="info-block">
+                <span class="info-label">What it is:</span>
+                Nourishing your body's natural filter to help it recover from fatty liver or toxin buildup.
+            </div>
+            <div class="info-block">
+                <span class="info-label">Common Symptoms:</span>
+                Persistent fatigue, yellowing of skin/eyes, and a feeling of fullness in the upper right abdomen.
+            </div>
+        </div>
+
+        <div class="service-card">
+            <h3>Pregnancy Nutrition</h3>
+            <div class="info-block">
+                <span class="info-label">What it is:</span>
+                A specialized plan focused on the critical nutrients needed for your baby's growth and your strength.
+            </div>
+            <div class="info-block">
+                <span class="info-label">Common Symptoms:</span>
+                Morning sickness, unusual cravings, and the physical exhaustion that comes with growing a new life.
+            </div>
+        </div>
+
+        <div class="service-card">
+            <h3>Postnatal & Lactation</h3>
+            <div class="info-block">
+                <span class="info-label">What it is:</span>
+                Support for new mothers to ensure quality milk production while replenishing their own nutrient stores.
+            </div>
+            <div class="info-block">
+                <span class="info-label">Common Symptoms:</span>
+                Low energy after birth, concerns about milk supply, and post-delivery hair fall or skin changes.
+            </div>
+        </div>
+    </div>
+
+    <a href="nutriguide2.html" class="back-link">← Return to Main Page</a>
+
+</body>
+</html>
