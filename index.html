@@ -2649,7 +2649,7 @@ html, body {
         </div>
 
         <div class="feedback-wrapper">
-            <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST" class="feedback-form">
+            <form action="https://script.google.com/macros/s/AKfycbx2Q0iUm7ZY4B3JBVGsoSfCcsSOZ0ZGgJ_Xtsb7VtzolXFrYr7PfmugjIEoyhH0BaEhGA/exec" method="POST" class="feedback-form">
                 <div class="input-row">
                     <div class="input-group">
                         <label>Name</label>
@@ -2657,18 +2657,24 @@ html, body {
                     </div>
                     <div class="input-group">
                         <label>Focus Area</label>
-                        <select name="program">
-                            <option value="pcos">PCOS/PCOD Management</option>
-                            <option value="weight-loss">Weight Loss</option>
-                            <option value="skin-health">Skin & Aesthetics</option>
-                            <option value="other">Other</option>
+                        <select name="goal">
+                            <option value="skin health & glow">Skin Health & Glow</option>
+                <option value="diabetes">Diabetes</option>
+				<option value="PCOD/PCOS">PCOD/POCS</option>
+				<option value="heart wellness">Heart Wellness</option>
+				<option value="renal [kidney] care">Renal (Kidney) Care</option>
+				<option value="thyroid support">Thyroid Support</option>
+				<option value="digestive issues">Digestive Issues</option>
+				<option value="liver health support">Liver Health Support</option>
+				<option value="pregnancy nutrition">Pregnancy Nutrition</option>
+				<option value="postnatal & lactation">Postnatal & Lactation</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="input-group">
                     <label>Your Story</label>
-                    <textarea name="comment" rows="5" placeholder="Describe your transformation or experience..." required></textarea>
+                    <textarea name="review" rows="5" placeholder="Describe your transformation or experience..." required></textarea>
                 </div>
 
                 <button type="submit" class="submit-btn">Post My Review</button>
@@ -2744,6 +2750,7 @@ html, body {
             this.reset();
         }
     </script>
+	
 	<script>
     let lastScrollY = window.scrollY;
     const nav = document.querySelector("nav");
@@ -2807,6 +2814,26 @@ window.onclick = function(event) {
         closeModal();
     }
 }
+</script>
+
+<script>
+const reviewForm = document.getElementById('feedback-form');
+
+reviewForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const data = new FormData(reviewForm);
+    const action = e.target.action;
+
+    fetch(action, {
+        method: 'POST',
+        body: data,
+    })
+    .then(() => {
+        alert("Thank you for your review!");
+        reviewForm.reset();
+    })
+    .catch(error => console.error('Error!', error.message));
+});
 </script>
 
 	<a href="#" class="back-to-top">↑</a>
