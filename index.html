@@ -2077,6 +2077,41 @@ nav .btn {
     color: var(--primary-green);
 }
 
+.direct-contact {
+    font-family: 'Playfair Display', serif;
+    color: #555; /* A softer gray for the "OR" text */
+    font-size: 35px;
+    margin-top: 20px;
+}
+
+.whatsapp-box {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    background-color: #ffffff; /* White background for a clean look */
+    color: #2D5A43; /* Deep green text to match your image */
+    border: 2px solid #2D5A43; /* Border matching your brand green */
+    border-radius: 50px; /* Fully rounded "pill" shape */
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+}
+
+.whatsapp-box i {
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+/* Hover effect to make it feel interactive */
+.whatsapp-box:hover {
+    background-color: #2D5A43; /* Swaps colors on hover */
+    color: #ffffff;
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(45, 90, 67, 0.2);
+}
+
 /* Glass-morphism Form Card */
 .inquiry-form-card {
     flex: 1;
@@ -2712,9 +2747,16 @@ html, body {
             <p class="subtitle">We are here to listen and guide you toward a healthier version of yourself.</p>
             <div class="contact-details">
                 <p><span>📍</span> Available Nationally (Online)</p>
-                <p><span>✉️</span> preeti.dt@gmail.com</p>
+                <p><span>✉️</span> preeti.dt9@gmail.com</p>
                 <p><span>📸</span> @nutriguide_preeti</p>
             </div>
+			<div class="direct-contact">
+    OR directly contact at - 
+    <a href="https://wa.me/9266958520?text=Hi!%20I%20am%20interested%20in%20a%20consultation." 
+       target="_blank" class="whatsapp-box">
+       <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+</div>
         </div>
 
         <div class="inquiry-form-card">
