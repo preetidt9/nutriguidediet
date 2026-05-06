@@ -233,28 +233,28 @@ input:focus, select:focus, textarea:focus {
     <form id="appointment-form" action="https://script.google.com/macros/s/AKfycbz4qdd8WhuXddqLbwsT1YsTveuDWJ8hWorK8Yrku6b-7VQ4VypZv7pvEovUq7M7mys9/exec" method="POST">
         <div class="form-group">
             <label>Full Name</label>
-            <input type="text" placeholder="e.g. John Doe">
+            <input type="text" placeholder="e.g. John Doe" name="name" required>
         </div>
 
         <div class="row">
             <div class="form-group">
                 <label>Email Address</label>
-                <input type="email" placeholder="email@example.com">
+                <input type="email" placeholder="email@example.com" name="email" required>
             </div>
             <div class="form-group">
                 <label>Phone Number</label>
-                <input type="tel" placeholder="+91 XXXXX XXXXX">
+                <input type="tel" placeholder="+91 XXXXX XXXXX" name= "phone" required>
             </div>
         </div>
 
         <div class="row">
             <div class="form-group">
                 <label>Preferred Date</label>
-                <input type="date">
+                <input type="date" name= "Preferred Date" required>
             </div>
             <div class="form-group">
                 <label>Preferred Time</label>
-                <input type="time">
+                <input type="time" name="Preferred Time" required>
             </div>
         </div>
 
@@ -271,7 +271,7 @@ input:focus, select:focus, textarea:focus {
 
         <div class="form-group">
             <label>Message or Medical History (Optional)</label>
-            <textarea placeholder="Tell us a little about your journey..."></textarea>
+            <textarea placeholder="Tell us a little about your journey..." name="message"></textarea>
         </div>
 		
 		<div class="checkbox-group">
@@ -284,6 +284,23 @@ input:focus, select:focus, textarea:focus {
         <button type="submit" class="submit-btn">Reserve My Slot</button>
     </form>
 </div>
+<script>
+  const form = document.getElementById('appointment-form');
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const action = e.target.action;
+    fetch(action, {
+      method: 'POST',
+      body: data,
+    })
+    .then(() => {
+      alert("Success! Your appointment request has been added to our records.");
+      form.reset();
+    })
+  });
+</script>
+	
 <script>
     let lastScrollY = window.scrollY;
     const nav = document.querySelector("nav");
